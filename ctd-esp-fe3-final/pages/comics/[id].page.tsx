@@ -1,9 +1,9 @@
 import { Comic } from "dh-marvel/features/card.type";
 import { NextPage } from "next";
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import { CardDescription } from "dh-marvel/components/comicsID/cardDescription";
-import { CardDetalle } from "dh-marvel/components/comicsID/cardDetalle";
-import { CardImage } from "dh-marvel/components/comicsID/cardImage";
+import { CardDescription } from "dh-marvel/components/ComicsID/cardDescription";
+import { CardDetalle } from "dh-marvel/components/ComicsID/cardDetalle";
+import { CardImage } from "dh-marvel/components/ComicsID/cardImage";
 import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
 import { getComic } from "dh-marvel/services/marvel/marvel.service";
 import character from "dh-marvel/test/mocks/character";

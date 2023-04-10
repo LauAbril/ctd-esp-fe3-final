@@ -16,15 +16,16 @@ const CheckoutPage: NextPage = () => {
   let extension = localStorage.getItem("extensionImage");
   let image = path + "." + extension;
 
- if(!title){
-  return <></>
- }
-
   useEffect(() =>{
     if(!title){
       router.push("./")
     }
   },[title])
+
+
+ if(!title){
+  return <></>
+ }
 
   return (
     <BodySingle title={`Checkout: ${title}`}>

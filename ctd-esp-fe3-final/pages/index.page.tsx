@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
 import { Comic } from "dh-marvel/features/card.type";
-import { GridCard } from "dh-marvel/components/card/gridCard";
+import { GridCard } from "dh-marvel/components/Card/gridCard";
 import { Box, CircularProgress, Pagination, Stack } from "@mui/material";
 import { getComics } from "dh-marvel/services/marvel/marvel.service";
 import { useEffect, useState } from "react";
