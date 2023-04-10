@@ -6,12 +6,13 @@ import useOrder from "dh-marvel/components/formCheckout/contexto/useOrder";
 import LayoutCheckout from "dh-marvel/components/layouts/layout-checkout";
 import { CheckoutInput } from "dh-marvel/features/checkout/checkout.types";
 import { NextPage } from "next";
-
+'use client'
 const OrdenConfirmada: NextPage = () => {
+  
   const { state } = useOrder();
   const data = state.order;
 
-
+  if (typeof window !== 'undefined') {
   let title = localStorage.getItem("title");
   let price = localStorage.getItem("price");
   let path = localStorage.getItem("pathImage");
@@ -46,6 +47,10 @@ const OrdenConfirmada: NextPage = () => {
       </Stack>
     </Box>
   );
+}
+else{
+  return <></>
+}
 };
 (OrdenConfirmada as any).Layout = LayoutCheckout;
 export default OrdenConfirmada;
