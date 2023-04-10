@@ -6,26 +6,28 @@ import { NextPage } from "next";
 import LayoutCheckout from "dh-marvel/components/layouts/layout-checkout";
 import { useEffect } from "react";
 import router from "next/router";
+'use client'
 
 const CheckoutPage: NextPage = () => {
 
-
+  if (typeof window !== 'undefined') {
   let title = localStorage.getItem("title");
   let price = localStorage.getItem("price");
   let path = localStorage.getItem("pathImage");
   let extension = localStorage.getItem("extensionImage");
   let image = path + "." + extension;
 
-  useEffect(() =>{
+  
     if(!title){
       router.push("./")
     }
-  },[title])
 
-
+  
  if(!title){
   return <></>
  }
+
+
 
   return (
     <BodySingle title={`Checkout: ${title}`}>
@@ -41,6 +43,10 @@ const CheckoutPage: NextPage = () => {
       </Box>
     </BodySingle>
   );
+  }
+  else{
+    return <></>
+  }
 }
 (CheckoutPage as any).Layout = LayoutCheckout;
 
