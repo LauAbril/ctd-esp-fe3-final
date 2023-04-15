@@ -8,7 +8,7 @@ export interface Data {
 }
 const CardDatosComic:FC<Data> = ({image, title, price}) => {
   return (
-    <Card sx={{ maxWidth: 200,  height:"15%"}}>
+    <Card sx={{ maxWidth: 380, marginBottom: 5, marginTop: 3 }}>
       <Stack>
         <CardMedia
           component="img"

@@ -9,6 +9,7 @@ const GeneralFooter = () => {
               alignItems='center'
               justifyContent={'center'}
               borderTop={'1px solid #eaeaea'}
+              marginTop= '20px'
         sx={{backgroundColor: '#000'}}>
             <Link
                 href="https://www.digitalhouse.com"

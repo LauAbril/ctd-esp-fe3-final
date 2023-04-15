@@ -31,10 +31,10 @@ mockUseOrder.mockReturnValue({
   state: {
     order: {
       card: {
-        nameOnCard: "Visa",
-          number: "4242424242424242",
-          expDate: "25/07",
-          cvc: "789",
+          nameOnCard: "Visa",
+          number: "12547856985412563",
+          expDate: "10/28",
+          cvc: "123",
       },
     },
   } as OrderState,
@@ -57,10 +57,10 @@ describe("DatosPagoForm", () => {
         </OrderProvider>
       );
 
-      userEvent.type(screen.getByRole("textbox", { name: "CVV" }), "345");
+      userEvent.type(screen.getByRole("textbox", { name: "CVV" }), "123");
       userEvent.type(
         screen.getByRole("textbox", { name: "exp MM/YY" }),
-        "11/23"
+        "10/28"
       );
 
       userEvent.click(screen.getByRole("button", { name: "Comprar" }));
@@ -71,9 +71,9 @@ describe("DatosPagoForm", () => {
       expect(mockDispatch).toBeCalledWith({
         payload: {
           nameOnCard: "Visa",
-          number: "4242424242424242",
-          expDate: "25/07",
-          cvc: "789",
+          number: "12547856985412563",
+          expDate: "10/28",
+          cvc: "123",
         },
         type: "SET_CARD",
       });

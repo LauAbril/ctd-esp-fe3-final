@@ -22,18 +22,18 @@ export const CardDetalle: FC<detalleComicProps> = ({
     });
   };
   return (
-    <CardContent>
+    <CardContent >
       <Typography variant="h5" component="div">
         {title}
       </Typography>
-      <Typography variant="body1" component="div">
+      <Typography sx={{ marginTop: 2}} variant="body1" component="div">
         Antes ${oldPrice}
       </Typography>
-      <Typography variant="subtitle1" component="div">
+      <Typography variant="h5" component="div">
         ${price}
       </Typography>
       {stock ? (
-        <Button size="small" onClick={handleClick}>
+        <Button sx={{ marginTop: 2}} variant="contained" size="medium" onClick={handleClick}>
           Comprar
         </Button>
       ) : (

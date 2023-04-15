@@ -20,8 +20,8 @@ export const DetalleCompra: FC<Props> = ({
 }) => {
   return (
     <Box>
-      <Stack spacing={2} flexDirection="row" alignItems="center">
-        <Card>
+      <Stack spacing={5}  alignItems="center" direction={{ xs: 'column', sm: 'row' }} >
+        <Card sx={{ width: 500}}>
           <CardContent>
           <h4>Datos Personales</h4>
             <Typography variant="subtitle2" color="text.primary">
@@ -32,7 +32,7 @@ export const DetalleCompra: FC<Props> = ({
             </Typography>
           </CardContent>
         </Card>
-        <Card>
+        <Card sx={{ width: 500}}>
           <CardContent>
             <h4>Dirección de entrega</h4>
             <Typography variant="subtitle2" color="text.primary">

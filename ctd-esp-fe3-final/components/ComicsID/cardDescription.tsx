@@ -27,7 +27,7 @@ export const CardDescription: FC<comicIDProps> = ({
 
   return (
     <>
-      <Accordion sx={{ width: "50%", flexShrink: 0 }}>
+      <Accordion sx={{ width: "100%", flexShrink: 0, marginTop: 5}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -44,7 +44,7 @@ export const CardDescription: FC<comicIDProps> = ({
         </AccordionDetails>
       </Accordion>
       {available ? (
-        <Accordion sx={{ width: "50%", flexShrink: 0 }}>
+        <Accordion sx={{ width: "100%", flexShrink: 0, marginTop: 2 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"

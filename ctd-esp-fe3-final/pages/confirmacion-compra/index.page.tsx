@@ -20,13 +20,13 @@ const OrdenConfirmada: NextPage = () => {
   let image = path + "." + extension;
 
   return (
-    <Box sx={{ width: "90%" }}>
+    <Box sx={{ width: "100%" }}>
       <Typography
         sx={{ backgroundColor: "green", width: "100%", textAlign: "center" }}
-        variant="body1"
+        variant="h5"
         color="white"
       >
-        Felicitaciones
+        ¡Que disfrutes tu compra!
       </Typography>
       <Stack spacing={2} alignItems="center">
         <CardDatosComic
@@ -35,7 +35,7 @@ const OrdenConfirmada: NextPage = () => {
           price={Number(price)}
         />
       </Stack>
-      <Stack spacing={2} alignItems="center">
+      <Stack spacing={2} alignItems="center" >
         <DetalleCompra
           name={data.customer.name}
           lastname={data.customer.lastname}

@@ -66,9 +66,9 @@ describe("DatosPersonalesForm", () => {
       });
       expect(mockDispatch).toBeCalledWith({
         payload: {
-            name: "Carolina",
-            lastname: "Salazar",
-            email: "Caro@user.com",
+            name: "Pepe",
+            lastname: "Rodriguez",
+            email: "peperodriguez@gmail.com",
         },
         type: "SET_CUSTOMER",
       });

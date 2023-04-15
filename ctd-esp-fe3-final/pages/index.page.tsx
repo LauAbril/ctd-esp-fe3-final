@@ -68,6 +68,7 @@ const Index: NextPage<props> = ({ comics, total }) => {
             count={Math.ceil(total / 12)}
             page={page}
             onChange={handleChange}
+          
           />
         </Stack>
         {isLoading ? (
@@ -75,7 +76,7 @@ const Index: NextPage<props> = ({ comics, total }) => {
             <CircularProgress />
           </Stack>
         ) : (
-          <GridCard comics={pageComic} />
+          <GridCard comics={pageComic}/>
         )}
 
         <Stack spacing={2} alignItems="center">

@@ -10,7 +10,7 @@ interface props {
 
 export const GridCard: FC<props> = ({ comics }) => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", marginTop: 3, marginBottom: 3 }}>
       <Grid2
         container
         spacing={{ xs: 2, md: 3 }}

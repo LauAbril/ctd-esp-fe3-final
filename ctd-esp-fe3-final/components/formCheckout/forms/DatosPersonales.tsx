@@ -24,9 +24,9 @@ const DatosPersonales: FC<DatosPersonalesProps> = ({
   const methods = useForm<DatosPersonalesForm>({
     resolver: yupResolver(ValidationSchemaPersonaldata),
     defaultValues: {
-      name: "Carolina",
-      lastname: "Salazar",
-      email: "Caro@user.com",
+      name: "Pepe",
+      lastname: "Rodriguez",
+      email: "peperodriguez@gmail.com",
     },
   });
   const { setFocus, handleSubmit } = methods;

@@ -26,11 +26,11 @@ const DireccionEntrega: FC<DireccionEntregaProps> = ({
   const methods = useForm<DireccionEntregaForm>({
     resolver: yupResolver(ValidationSchemaAdressDirection),
     defaultValues: {
-        address1: "Belgrano",
+        address1: "Moreno",
         address2: "2",
-        city: "Tandil",
+        city: "Capital Federal",
         state: "BA",
-        zipCode: "7000",
+        zipCode: "1400",
     },
   });
 

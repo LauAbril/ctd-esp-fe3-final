@@ -32,11 +32,11 @@ mockUseOrder.mockReturnValue({
     order: {
       customer: {
         address: {
-          address1: "Belgrano",
+          address1: "Moreno",
           state: "BA",
-          city: "Tandil",
+          city: "Capital Federal",
           address2: "2",
-          zipCode: "7000",
+          zipCode: "1400",
         },
       },
     },
@@ -62,9 +62,9 @@ describe("DireccionEntregaForm", () => {
 
       userEvent.type(
         screen.getByRole("textbox", { name: "Direccion" }),
-        "Belgrano 1234"
+        "Moreno 1458"
       );
-      userEvent.type(screen.getByRole("textbox", { name: "Ciudad" }), "Tandil");
+      userEvent.type(screen.getByRole("textbox", { name: "Ciudad" }), "Capital Federal");
 
       userEvent.click(screen.getByRole("button", { name: "Siguiente" }));
 
@@ -73,11 +73,11 @@ describe("DireccionEntregaForm", () => {
       });
       expect(mockDispatch).toBeCalledWith({
         payload: {
-          address1: "Belgrano",
+          address1: "Moreno",
           state: "BA",
-          city: "Tandil",
+          city: "Capital Federal",
           address2: "2",
-          zipCode: "7000",
+          zipCode: "1400",
         },
         type: "SET_ADDRESS",
       });

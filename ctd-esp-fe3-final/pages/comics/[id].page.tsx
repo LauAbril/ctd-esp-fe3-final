@@ -1,6 +1,6 @@
 import { Comic } from "dh-marvel/features/card.type";
 import { NextPage } from "next";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography, Card} from "@mui/material";
 import { CardDescription } from "dh-marvel/components/ComicsID/cardDescription";
 import { CardDetalle } from "dh-marvel/components/ComicsID/cardDetalle";
 import { CardImage } from "dh-marvel/components/ComicsID/cardImage";
@@ -32,6 +32,7 @@ const ComicId: NextPage<comicIDProps> = ({ data }) => {
 
   return (
     <>
+
       <Box>
         <BodySingle title={data.title}>
           <Stack spacing={2} alignItems="center">
@@ -42,14 +43,14 @@ const ComicId: NextPage<comicIDProps> = ({ data }) => {
                   image={data.thumbnail.path + "." + data.thumbnail.extension}
                 />
               </Grid>
-              <Grid>
+              <Card sx={{ width: 500 }}>
                 <CardDetalle
                   title={data.title}
                   price={data.price}
                   oldPrice={data.oldPrice}
                   stock={data.stock}
                 />
-              </Grid>
+              </Card>
             </Grid>
           </Stack>
           <Box>

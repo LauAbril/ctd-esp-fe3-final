@@ -30,8 +30,8 @@ const DatosPago: FC<DatosPagoProps> = ({ activeStep, handleBack, handleNext }) =
     defaultValues: {
       nameOnCard: "Visa",
       number: validCard,
-      expDate: "25/07",
-      cvc: "789",
+      expDate: "10/28",
+      cvc: "123",
     },
   });
 

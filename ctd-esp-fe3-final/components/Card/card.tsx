@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Card from "@mui/material/Card";
+import router from "next/router";
 import {
   Button,
   CardActions,
@@ -16,6 +17,11 @@ type propsComic = {
   id: number;
 };
 export const CardComic: FC<propsComic> = ({ title, image, id }) => {
+  const handleClick = () => {
+    router.push({
+      pathname: "/checkout",
+    });
+  };
   return (
     <Card sx={{ maxWidth: 380 }}>
       <Stack spacing={2} alignItems="center">
@@ -33,7 +39,7 @@ export const CardComic: FC<propsComic> = ({ title, image, id }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Compra en 1 click</Button>
+        <Button size="small" onClick={handleClick} >Comprar</Button>
         <Link href={`/comics/${id}`}>
           <Button size="small">Ver Detalle</Button>
         </Link>
