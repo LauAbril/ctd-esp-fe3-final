@@ -57,7 +57,7 @@ describe("DatosPagoForm", () => {
         </OrderProvider>
       );
 
-      userEvent.type(screen.getByRole("textbox", { name: "CVV" }), "123");
+      userEvent.type(screen.getByLabelText("CVV" ), "123");
       userEvent.type(
         screen.getByRole("textbox", { name: "exp MM/YY" }),
         "10/28"
@@ -70,10 +70,10 @@ describe("DatosPagoForm", () => {
       });
       expect(mockDispatch).toBeCalledWith({
         payload: {
-          nameOnCard: "Visa",
-          number: "12547856985412563",
-          expDate: "10/28",
-          cvc: "123",
+            nameOnCard: "Visa",
+            number: "12547856985412563",
+            expDate: "10/28",
+            cvc: "123",
         },
         type: "SET_CARD",
       });
