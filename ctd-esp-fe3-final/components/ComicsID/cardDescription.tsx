@@ -55,7 +55,7 @@ export const CardDescription: FC<comicIDProps> = ({
           <AccordionDetails sx={{ backgroundColor: "whitesmoke" }}>
             {characters.map((item: any, index:any) => {
               return (
-                <Link key={index} href={`/characters/${traerId(item.resourceURI)}`}>
+                <Link key={index} href={`/personajes/${traerId(item.resourceURI)}`}>
                   {item.name}
                 </Link>
               );

@@ -74,10 +74,10 @@ const DatosPago: FC<DatosPagoProps> = ({ activeStep, handleBack, handleNext }) =
     <Stack>
       <form>
         <FormProvider {...methods}>
-          <InputText label="Nombre Tarjeta" name="nameOnCard" />
-          <InputText label="Numero de Tarjeta" name="number" />
-          <InputText label="exp MM/YY" name="expDate" />
-          <InputText label="CVV" name="cvc" />
+          <InputText label="Nombre Tarjeta" name="nameOnCard" type="text" />
+          <InputText label="Numero de Tarjeta" name="number" type="text"/>
+          <InputText label="exp MM/YY" name="expDate" type="text"/>
+          <InputText label="CVV" name="cvc" type="password"/>
         </FormProvider>
       </form>
 

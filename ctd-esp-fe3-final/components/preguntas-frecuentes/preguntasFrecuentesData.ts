@@ -1,10 +1,10 @@
-export type FaqsType = {
+export type PreguntasFrecuentesType = {
     id: number,
     question: string,
     answer: string,
 }
 
-export const faqsData: FaqsType[] = [
+export const preguntasFrecuentesData: PreguntasFrecuentesType[] = [
     {
         "id": 1,
         "question": "¿Cuántos comics tienen?",

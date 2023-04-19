@@ -6,12 +6,12 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FC } from "react";
-import { FaqsType } from "./faqsData";
+import { PreguntasFrecuentesType } from "./preguntasFrecuentesData";
 interface Props {
-  data: FaqsType;
+  data: PreguntasFrecuentesType;
 }
 
-const Faqs: FC<Props> = ({ data }) => {
+const PreguntasFrecuentes: FC<Props> = ({ data }) => {
   return (
     <div key={data.id}>
       <Accordion>
@@ -29,4 +29,4 @@ const Faqs: FC<Props> = ({ data }) => {
     </div>
   );
 };
-export default Faqs;
+export default PreguntasFrecuentes;

@@ -6,8 +6,9 @@ interface Props {
   name: string;
   label: string;
   defaultValue?: string;
+  type: string;
 }
-const InputText: FC<Props> = ({name, label, defaultValue}) => {
+const InputText: FC<Props> = ({name, label, defaultValue, type}) => {
   const {control} = useFormContext();
 
   const {
@@ -28,6 +29,7 @@ const InputText: FC<Props> = ({name, label, defaultValue}) => {
          label={label} 
          inputRef={ref}
          fullWidth 
+         type={type}
          error={!!errors[name]}
          helperText={`${errors[name]?.message || ''}`}
         />

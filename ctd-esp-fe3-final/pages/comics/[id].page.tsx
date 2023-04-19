@@ -1,13 +1,13 @@
 import { Comic } from "dh-marvel/features/card.type";
 import { NextPage } from "next";
-import { Box, Grid, Stack, Typography, Card} from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import { CardDescription } from "dh-marvel/components/ComicsID/cardDescription";
 import { CardDetalle } from "dh-marvel/components/ComicsID/cardDetalle";
 import { CardImage } from "dh-marvel/components/ComicsID/cardImage";
 import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
 import { getComic } from "dh-marvel/services/marvel/marvel.service";
 import character from "dh-marvel/test/mocks/character";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export async function getServerSideProps(req: { query: { id: any } }) {
   const { id } = req.query;
@@ -20,19 +20,25 @@ interface comicIDProps {
 }
 
 const ComicId: NextPage<comicIDProps> = ({ data }) => {
+  const [domLoaded, setDomLoaded] = useState(false);
 
-  if (!data) {
-    return <></>;
-  }
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+    if (!data) {
+      return <></>;
+    }
   
-  localStorage.setItem("title", data.title);
-  localStorage.setItem("price", String(data.price));
-  localStorage.setItem("pathImage", data.thumbnail.path);
-  localStorage.setItem("extensionImage", data.thumbnail.extension);
+  if(typeof window !== 'undefined'){
+    localStorage.setItem("title", data.title);
+    localStorage.setItem("price", String(data.price));
+    localStorage.setItem("pathImage", data.thumbnail.path);
+    localStorage.setItem("extensionImage", data.thumbnail.extension);
+
 
   return (
     <>
-
+    {domLoaded && (
       <Box>
         <BodySingle title={data.title}>
           <Stack spacing={2} alignItems="center">
@@ -43,14 +49,14 @@ const ComicId: NextPage<comicIDProps> = ({ data }) => {
                   image={data.thumbnail.path + "." + data.thumbnail.extension}
                 />
               </Grid>
-              <Card sx={{ width: 500 }}>
+              <Grid>
                 <CardDetalle
                   title={data.title}
                   price={data.price}
                   oldPrice={data.oldPrice}
                   stock={data.stock}
                 />
-              </Card>
+              </Grid>
             </Grid>
           </Stack>
           <Box>
@@ -73,8 +79,13 @@ const ComicId: NextPage<comicIDProps> = ({ data }) => {
           </Box>
         </BodySingle>
       </Box>
+      )}
     </>
   );
+}else{
+  return <></>
+}
 };
+
 
 export default ComicId;
