@@ -50,7 +50,7 @@ const DatosPersonales: FC<DatosPersonalesProps> = ({
         <FormProvider {...methods}>
           <InputText name="name" label="Name" type="text"/>
           <InputText name="lastname" label="LastName" type="text"/>
-          <InputText name="email" label="Email" type="text"/>
+          <InputText name="email" label="Email" type="password"/>
         </FormProvider>
       </form>
       <StepperNavigation
