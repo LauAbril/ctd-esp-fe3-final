@@ -48,9 +48,9 @@ const DatosPersonales: FC<DatosPersonalesProps> = ({
     <Stack>
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormProvider {...methods}>
-          <InputText name="name" label="Name" />
-          <InputText name="lastname" label="LastName" />
-          <InputText name="email" label="Email" />
+          <InputText name="name" label="Name" type="text"/>
+          <InputText name="lastname" label="LastName" type="text"/>
+          <InputText name="email" label="Email" type="text"/>
         </FormProvider>
       </form>
       <StepperNavigation

@@ -53,11 +53,11 @@ const DireccionEntrega: FC<DireccionEntregaProps> = ({
     <Stack>
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormProvider {...methods}>
-          <InputText label="Direccion" name="address1" />
-          <InputText label="Departamento, piso, etc." name="address2" />
-          <InputText label="Ciudad" name="city" />
-          <InputText label="Provincia" name="state" />
-          <InputText label="Cod Postal" name="zipCode" />
+          <InputText label="Direccion" name="address1" type="text"/>
+          <InputText label="Departamento, piso, etc." name="address2" type="text" />
+          <InputText label="Ciudad" name="city" type="text"/>
+          <InputText label="Provincia" name="state" type="text"/>
+          <InputText label="Cod Postal" name="zipCode" type="text"/>
         </FormProvider>
       </form>
 
